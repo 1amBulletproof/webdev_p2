@@ -1,17 +1,12 @@
 /*
-//@TODO: implement error checking in setters
  * SHIP ABSTRACT CLASS:
- *  - implements the Contact Interface. The methods in contact should be defined (no longer abstract, but they can be overriden later on).
+ *  - implements the Contact Interface. 
  * @author Brandon Tarney
  * @Date   6/10/2017
  */
 package com.brandontarney;
 
-/**
- *
- * @author Tarney
- */
-public abstract class Ship {
+public abstract class Ship implements Contact {
      
     int length;
     int speed;
@@ -26,8 +21,8 @@ public abstract class Ship {
     }
     
     public Ship( int length, int speed, String name, String type) {
-        this.length = length;
-        this.speed = speed;
+        this.length = Checker.formatInt(length);
+        this.speed = Checker.formatInt(speed);
         this.name = name;
         this.type = type;
     }
@@ -37,7 +32,7 @@ public abstract class Ship {
     }
     
     public void setLength(int length) {
-        this.length = length;
+        this.length = Checker.formatInt(length);
     }
     
     public int getSpeed() {
@@ -45,11 +40,11 @@ public abstract class Ship {
     }
     
     public void setSpeed(int speed) {
-        this.speed = speed;
+        this.speed = Checker.formatInt(speed);
     }
     
     public void setSpeed(String speed) {
-        this.speed = Integer.parseInt(speed);
+        this.speed = Checker.formatStringToInt(speed);
     }
     
     public String getName() {
@@ -68,4 +63,12 @@ public abstract class Ship {
         this.type = type;
     } 
     
+    @Override
+    public String toString() {
+        return "Name: " + this.name + 
+                ", Type: " + this.type +
+                ", Length: " + this.length + 
+                ", Speed: " + this.speed;
+    }
+      
 }

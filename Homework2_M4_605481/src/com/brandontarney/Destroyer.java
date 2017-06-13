@@ -1,18 +1,43 @@
 /*
  * DESTROYER CLASS:
- *      -subclasses Ship  
-    
-        1.  that has the following attributes and get/set methods. Supports int and String setNumberTorpedos() arguments. If the String argument of setNumberTorpedos() encounters a parsing error, set the numberTorpedos to 2      
-            1. numberTorpedos
+ *   
  * @author Brandon Tarney
- * @Date   6/10/2017
+ * @since   6/10/2017
  */
 package com.brandontarney;
 
-/**
- *
- * @author Tarney
- */
-public class Destroyer {
+public class Destroyer extends Ship {
+
+    private int numMissiles;
+
+    public Destroyer() {
+        super();
+        numMissiles = 0;
+    }
+
+    public Destroyer(int length, int speed, String name,
+            String type, int numberMissiles) {
+        super(length, speed, name, type);
+        numMissiles = Checker.formatInt(numberMissiles);
+    }
+
+    public int getNumberMissiles() {
+        return this.numMissiles;
+    }
+
+    public void setNumberMissiles(int numberMissiles) {
+        this.numMissiles = Checker.formatInt(numberMissiles);
+    }
+
+    public void setNumberMissiles(String numberMissiles) {
+        this.numMissiles = Checker.formatStringToInt(numberMissiles);
+    }
     
+    @Override
+    public String toString() {
+        StringBuilder returnVal = new StringBuilder(super.toString());
+        returnVal.append(", Number of Missiles: " + this.numMissiles);
+        return returnVal.toString();
+    }
+
 }

@@ -1,18 +1,44 @@
 /*
  * SUBMARINE CLASS:
- *      -subclasses Ship  
-    
-    1.  that has the following attributes and get/set methods. Supports int and String setNumberTorpedos() arguments. If the String argument of setNumberTorpedos() encounters a parsing error, set the numberTorpedos to 2      
-        1. numberTorpedos
+ *
  * @author Brandon Tarney
- * @Date   6/10/2017
+ * @since   6/10/2017
  */
+
 package com.brandontarney;
 
-/**
- *
- * @author Tarney
- */
-public class Submarine {
+public class Submarine extends Ship {
+
+    private int numTorpedos;
+
+    public Submarine() {
+        super();
+        numTorpedos = 0;
+    }
+
+    public Submarine(int length, int speed, String name,
+            String type, int numberTorpedos) {
+        super(length, speed, name, type);
+        numTorpedos = Checker.formatInt(numberTorpedos);
+    }
+
+    public int getNumberTorpedos() {
+        return this.numTorpedos;
+    }
+
+    public void setNumberTorpedos(int numberTorpedos) {
+        this.numTorpedos = Checker.formatInt(numberTorpedos);
+    }
+
+    public void setNumberTorpedos(String numberTorpedos) {
+        this.numTorpedos = Checker.formatStringToInt(numberTorpedos);
+    }
     
+    @Override
+    public String toString() {
+        StringBuilder returnVal = new StringBuilder(super.toString());
+        returnVal.append(", Number of Torpedos: " + this.numTorpedos);
+        return returnVal.toString();
+    }
+
 }

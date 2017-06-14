@@ -2,7 +2,7 @@
  * SHIP ABSTRACT CLASS:
  *  - implements the Contact Interface. 
  * @author Brandon Tarney
- * @Date   6/10/2017
+ * @since   6/10/2017
  */
 package com.brandontarney;
 

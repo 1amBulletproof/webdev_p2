@@ -1,4 +1,4 @@
-/*
+/**
  * SHIP ABSTRACT CLASS:
  *  - implements the Contact Interface. 
  * @author Brandon Tarney

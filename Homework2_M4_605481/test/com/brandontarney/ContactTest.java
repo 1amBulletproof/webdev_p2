@@ -1,4 +1,6 @@
-/*
+/**
+ * TEST CLASS
+ * 
  * 1. Create 2 Destroyers
  * 2. Create 2 Submarines  
  * 3. Create 2 P3s  

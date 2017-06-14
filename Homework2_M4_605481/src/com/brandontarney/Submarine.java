@@ -1,4 +1,4 @@
-/*
+/**
  * SUBMARINE CLASS:
  *
  * @author Brandon Tarney

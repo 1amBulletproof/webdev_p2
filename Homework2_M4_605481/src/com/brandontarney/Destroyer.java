@@ -1,4 +1,4 @@
-/*
+/**
  * DESTROYER CLASS:
  *   
  * @author Brandon Tarney

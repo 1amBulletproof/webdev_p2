@@ -1,4 +1,4 @@
-/*
+/**
  * AIRCRAFT ABSTRACT CLASS:
  *  - implements the Contact Interface. 
         This class should also contain a getAltitude/setAltitude(int) method.

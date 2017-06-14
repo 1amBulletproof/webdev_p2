@@ -1,4 +1,4 @@
-/*
+/**
  * CHECKER CLASS
  *
  *  - Checks the format of int & Strings and sets value appropriately
